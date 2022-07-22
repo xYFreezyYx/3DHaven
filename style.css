@@ -1,0 +1,316 @@
+html, body{
+    margin: 0;
+    font-size: 20px;
+    font-family: Times New Roman;
+    color: rgb(0, 48, 73);
+    background-color: rgb(234, 226, 183);
+    text-align: center;
+}
+
+header{
+    background-color: rgb(252, 191, 73);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ToolBar{
+    background-color: rgb(252, 191, 73);
+    box-shadow: 0px 0px 50px rgb(252, 191, 73);
+
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ToolBar > input{
+    font-size: 14px;
+    margin-bottom: 5px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+header > h1{
+    font-size: 46px;
+    margin-top: 5px;
+    margin-bottom: 0;
+    margin-left: 15px;
+}
+
+header > h1 > span{
+    font-weight: bolder;
+    color: #f7f7f7;
+}
+
+header > h1:hover{
+    cursor: pointer;
+}
+
+.Contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Stock{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 15px;
+}
+
+.Item{
+    width: 210px;
+    height: 300px;
+    margin: 10px;
+}
+
+.Item:hover{
+    background-color: rgba(255, 193, 70, 0.491);
+    box-shadow: 0px 0px 10px rgba(255, 193, 70, 0.491);
+    cursor: pointer;
+}
+
+.Stock > span{
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.Stock > p{
+    margin: 0;
+    margin-top: 5px;
+}
+
+.Item-Info{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.Item-IMGs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.IMG-Buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.IMG-Buttons > input{
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+}
+
+.IMG-Buttons > p{
+    margin: 0;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.Item-Description > h4{
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.Item-Description > h3{
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.Item-Description > p{
+    width: 315px;
+    margin-top: 35px;
+}
+
+.Color-IMG{
+    border-color: black;
+    border-radius: 50px;
+    border-style: solid;
+
+    margin: 5px;
+}
+
+.Colors{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    border-color: black;
+    border-radius: 25px;
+    border-style: solid;
+
+    width: 490px;
+    height: 235px;
+}
+
+.Colors > h3{
+    margin: 0;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.Colors > h4{
+    margin: 0;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    color: crimson;
+}
+
+.Color-Info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Color-Div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 120px;
+    height: 140px;
+}
+
+.Item-Info-Main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+
+.Form-Input-Div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Form > p{
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.Form > p > span{
+    color: crimson;
+}
+
+.Labels{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+
+    margin-right: 5px;
+}
+
+.Labels > label{
+    margin-top: 5px;
+}
+
+.Inputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    margin-left: 1px;
+}
+
+.Inputs > input{
+    margin-top: 2px;
+}
+
+.Inputs > select{
+    margin-top: 2px;
+}
+
+input{
+    border-radius: 15px;
+    border-color: transparent;
+    color: rgb(0, 48, 73);
+    background-color: rgb(247, 127, 0);
+    box-shadow: 0px 0px 10px rgb(247, 127, 0);
+    font-size: 18px;
+    cursor: pointer;
+}
+
+input[type="text"]{
+    background-color: rgba(255, 255, 255, 0.646);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.646);
+    cursor: text;
+}
+
+input::placeholder{
+    color: rgb(99, 99, 99);
+}
+
+input[type="button"]:hover{
+    background-color: rgba(247, 128, 0, 0.674);
+    box-shadow: 0px 0px 10px rgba(247, 128, 0, 0.674);
+}
+
+input[type="submit"]:hover{
+    background-color: rgba(247, 128, 0, 0.674);
+    box-shadow: 0px 0px 10px rgba(247, 128, 0, 0.674);
+}
+
+textarea{
+    border-radius: 15px;
+    border-color: transparent;
+    color: rgb(0, 48, 73);
+    background-color: rgba(255, 255, 255, 0.646);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.646);
+    font-size: 18px;
+    cursor: text;
+}
+
+select{
+    border-radius: 15px;
+    border-color: transparent;
+    color: rgb(0, 48, 73);
+    background-color: rgb(247, 127, 0);
+    box-shadow: 0px 0px 10px rgb(247, 127, 0);
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.Extra{
+    color: rgb(174, 53, 77);
+}
+
+.Submit{
+    margin-top: 10px;
+}
+
+.ItemDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
