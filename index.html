@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3D Haven</title>
-    <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="main.js" defer></script>
-    <script type="text/javascript" src="items.js" defer></script>
+    <link rel="icon" href="Photos/Logo.ico">
+    <link rel="stylesheet" href="style1.css">
+    <script type="text/javascript" src="main1.js" defer></script>
+    <script type="text/javascript" src="items1.js" defer></script>
 </head>
 <body>
     <header>
@@ -22,7 +23,7 @@
         </div>
         <div class="Stock">
             <div class="Item" onclick="PhoneHolder()">
-                <div class="item-img"><img src="Photos/Phone-Holder.png" alt="Telefona Turētājs" width="210" height="210"></div>
+                <div class="item-img"><img src="Photos/Phone-Holder-Front.png" alt="Telefona Turētājs" width="210" height="210"></div>
                 <div class="item-name"><span >Telefona turētājs</span></div>
                 <div class="item-price"><span>3 €</span></div>
             </div>
@@ -35,6 +36,11 @@
                 <div class="item-img"><img src="Photos/Litofanija-Light.png" alt="Litofānija" width="210" height="210"></div>
                 <div class="item-name"><span>Litofānija</span></div>
                 <div class="item-price"><span>20-50 €</span></div>
+            </div>
+            <div class="Item" onclick="Costum()">
+                <div class="item-img"><img src="Photos/Robo-Arm.png" alt="Telefona Turētājs" width="210" height="210"></div>
+                <div class="item-name"><span >Specializēts pasūtījums</span></div>
+                <div class="item-price"><span>No 10 €</span></div>
             </div>
         </div>
         <div class="Contact" style="display: none;">
@@ -51,7 +57,7 @@
                 </div>
                 <div class="Form-Input-Div" style="margin-top: 15px;">
                     <div class="Labels">
-                        <label for="Message">Ziņa:</label>
+                        <label>Ziņa:</label>
                     </div>
                     <div class="Inputs">
                         <textarea name="Message:" cols="30" rows="5" placeholder="Jūsu ziņojums" required=""></textarea>
@@ -66,12 +72,12 @@
                     <img id="PhoneH-Name-IMG-preview" class="IMG-preview" src="Photos/Phone-Holder-Tow.png" alt="Item Images" width="400" height="400">
                     <div class="IMG-Buttons">
                         <input type="button" onclick="IMGLeft()" value="<">
-                        <p class="IMG-Counter">1/3</p>
+                        <p class="IMG-Counter">1/4</p>
                         <input type="button" onclick="IMGRight()" value=">">
                     </div>
                 </div>
                 <div class="Item-Description">
-                    <H3>Personalizēts telefona turētājs</H3>
+                    <H3 id="Item-PhoneHName-Name" class="Item-Name">Personalizēts telefona turētājs</H3>
                     <h4>5 €</h4>
                     <input class="button" type="button" onclick="Buy()" value="Sagatavot pasūtījumu">
                 </div>
@@ -108,9 +114,9 @@
                 <input class="Submit" type="submit" value="Pasūtīt">
                 <p><span>Svarīgi!</span> Par pasūtījuma saņemšanu un apmaksu sazināšos ar jums. <span>Svarīgi!</span></p>
               </form>
-            <div class="Colors">
+            <div id="Colors-PhoneHName" class="Colors">
                 <h3>Pieejamās Krāsas</h3>
-                <div class="Color-Info">
+                <div id="Color-Info-PhoneHName" class="Color-Info">
                     <div class="Color-Div">
                         <img class="Color-IMG" src="https://www.filalab.lt/21-large_default/pla-1kg.jpg" alt="Balts" width="100" height="100">
                         <span>Balts</span>
@@ -128,7 +134,7 @@
                         <span>Melns</span>
                     </div>
                 </div>
-                <h4>Ja grib citas krāsas, kas nav šobrīd, būs jāpiemaksā!</h4>
+                <h4>Ja grib citas krāsas, kuras nav šobrīd, būs jāpiemaksā!</h4>
             </div>
             <div>
                 <input id="PhoneH-Name-Back" class="Back" type="button" value="Atpakaļ" onclick="Back()" style="display: none;">
@@ -137,15 +143,15 @@
         <div id="PhoneHolderDiv" class="ItemDiv" style="display: none;">
             <div id="PhoneH-Item-Info" class="Item-Info">
                 <div class="Item-IMGs">
-                    <img id="PhoneH-IMG-preview" class="IMG-preview" src="Photos/Phone-Holder.png" alt="Item Images" width="400" height="400">
+                    <img id="PhoneH-IMG-preview" class="IMG-preview" src="Photos/Phone-Holder-Front.png" alt="Item Images" width="400" height="400">
                     <div class="IMG-Buttons">
                         <input type="button" onclick="IMGLeft()" value="<">
-                        <p class="IMG-Counter">1/1</p>
+                        <p id="PhoneH-IMG-Counter" class="IMG-Counter">1/2</p>
                         <input type="button" onclick="IMGRight()" value=">">
                     </div>
                 </div>
                 <div class="Item-Description">
-                    <H3>Telefona turētājs</H3>
+                    <H3 id="Item-PhoneH-Name" class="Item-Name">Telefona turētājs</H3>
                     <h4>3 €</h4>
                     <input class="button" type="button" onclick="Buy()" value="Sagatavot pasūtījumu">
                 </div>
@@ -161,7 +167,7 @@
                         <label for="Email">Jūsu e-pasts:</label>
                     </div>
                     <div class="Inputs">
-                        <input name="Krāsa:" type="text" id="Color" placeholder="Ieraksti vēlamo krāšu" required="">
+                        <input name="Krāsa:" type="text" id="Color" placeholder="Ieraksti vēlamo krāsu" required="">
                         <select name="Apdare:" id="Outsdide" required="">
                             <option value="" selected disabled>Izvēlies</option>
                             <option value="Gluda">Gluda</option>
@@ -174,9 +180,9 @@
                 <input class="Submit" type="submit" value="Pasūtīt">
                 <p><span>Svarīgi!</span> Par pasūtījuma saņemšanu un apmaksu sazināšos ar jums. <span>Svarīgi!</p>
               </form>
-            <div class="Colors">
+            <div id="Colors-PhoneH" class="Colors">
                 <h3>Pieejamās Krāsas</h3>
-                <div class="Color-Info">
+                <div id="Color-Info-PhoneH" class="Color-Info">
                     <div class="Color-Div">
                         <img class="Color-IMG" src="https://www.filalab.lt/21-large_default/pla-1kg.jpg" alt="Balts" width="100" height="100">
                         <span>Balts</span>
@@ -194,7 +200,7 @@
                         <span>Melns</span>
                     </div>
                 </div>
-                <h4>Ja grib citas krāsas, kas nav šobrīd, būs jāpiemaksā!</h4>
+                <h4>Ja grib citas krāsas, kuras nav šobrīd, būs jāpiemaksā!</h4>
             </div>
             <div>
                 <input id="PhoneH-Back" class="Back" type="button" value="Atpakaļ" onclick="Back()" style="display: none;">
@@ -202,7 +208,7 @@
         </div>
         <div id="LitofanijaDiv" class="ItemDiv" style="display: none;">
             <div id="Litofanija-Item-Info" class="Item-Info" style="flex-direction: column; margin-top: 20px;">
-                <div style="display: flex;">
+                <div id="Litofanija-Item-Info-2" style="display: flex;">
                     <div class="Item-IMGs">
                         <img id="Litofanija-IMG-preview-1" class="IMG-preview" src="Photos/Litofanija-Light.png" alt="Item Images" width="400" height="400">
                         <div class="IMG-Buttons">
@@ -212,7 +218,7 @@
                         </div>
                     </div>
                     <div class="Item-Description">
-                        <H3>Litofānija</H3>
+                        <H3 id="Item-Lito-Name" class="Item-Name">Litofānija</H3>
                         <h4>20-50 €</h4>
                         <input class="button" type="button" onclick="Buy()" value="Sagatavot pasūtījumu">
                         <p>
@@ -233,7 +239,7 @@
                 </div>
             </div>
             <form id="Litofanija-Buy-Form" class="Form" action="https://formspree.io/f/mrgjnqbk" method="post" style="display: none;">
-                <p>Par pasūtījuma informācīju sazināšos ar jums.<br>Cena tiks noteikta, kad būs zināmi Litofānijas parametri.</p>
+                <p>Par pasūtījuma informāciju sazināšos ar jums.<br>Cena tiks noteikta, kad būs zināmi Litofānijas parametri.</p>
                 <div class="Form-Input-Div">
                     <textarea name="Pirkuma-Informācija:" cols="30" rows="10" style="display: none;">Litofānija</textarea>
                     <textarea name="Cena:" cols="30" rows="10" style="display: none;">20-50 €</textarea>
@@ -250,6 +256,79 @@
                 <p><span>Svarīgi!</span> Par pasūtījuma saņemšanu un apmaksu sazināšos ar jums. <span>Svarīgi!</p>
             </form>
             <input id="Litofanija-Back" class="Back" type="button" value="Atpakaļ" onclick="Back()" style="display: none;">
+        </div>
+        <div id="CostumDiv" class="ItemDiv" style="display: none;">
+            <div id="Costum-Item-Info" class="Item-Info">
+                <div class="Item-IMGs">
+                    <img id="Costum-IMG-preview" class="IMG-preview" src="Photos/Robo-Arm.png" alt="Item Images" width="400" height="400">
+                    <div class="IMG-Buttons">
+                        <input type="button" onclick="IMGLeft()" value="<">
+                        <p id="Special-IMG-Counter" class="IMG-Counter">1/3</p>
+                        <input type="button" onclick="IMGRight()" value=">">
+                    </div>
+                </div>
+                <div class="Item-Description">
+                    <H3 id="Item-Special-Name" class="Item-Name">Specializēts pasūtījums</H3>
+                    <h4>No 10 €</h4>
+                    <input class="button" type="button" onclick="Buy()" value="Sagatavot pasūtījumu">
+                    <p>
+                        Objekts var būt platumā un garumā 19 cm, bet augstumā 20cm.
+                        <br> Ja grib lielāku objektu, tad būs jāprintē pa vairākām daļām.
+                    </p>
+                </div>
+            </div>
+            <form id="Costum-Buy-Form" class="Form" action="https://formspree.io/f/mrgjnqbk" method="post" style="display: none;">
+                <p>Par pasūtījuma informāciju sazināšos ar jums.<br>Cena tiks noteikta, kad būs zināmi objekta parametri.</p>
+                <div class="Form-Input-Div" style="margin-top: 15px;">
+                    <div class="Labels">
+                        <label>Īss objekta aprakts:</label>
+                    </div>
+                    <div class="Inputs">
+                        <textarea name="Aprakts:" cols="30" rows="5" placeholder="Īsi aprakstiet savu objektu" required=""></textarea>
+                    </div>
+                </div>
+                <div class="Form-Input-Div">
+                    <textarea name="Pirkuma-Informācija:" cols="30" rows="10" style="display: none;">Specializēts pasūtījums</textarea>
+                    <textarea name="Cena:" cols="30" rows="10" style="display: none;">No 10 €</textarea>
+                    <div class="Labels">
+                        <label for="Color">Krāsa:</label>
+                        <label for="Name">Jūsu vārds:</label>
+                        <label for="Email">Jūsu e-pasts:</label>
+                    </div>
+                    <div class="Inputs">
+                        <input name="Krāsa:" type="text" id="Color" placeholder="ieraksti vēlamo krāsu" required="">
+                        <input name="Their-Name:" type="text" id="Name" placeholder="Raimonds" required="">
+                        <input name="Email:" type="text" id="Email" placeholder="someting@example.com" required="">
+                    </div>
+                </div>
+                <input class="Submit" type="submit" value="Pasūtīt">
+                <p><span>Svarīgi!</span> Par pasūtījuma saņemšanu un apmaksu sazināšos ar jums. <span>Svarīgi!</span></p>
+              </form>
+            <div id="Colors-Special" class="Colors">
+                <h3>Pieejamās Krāsas</h3>
+                <div id="Color-Info-Special" class="Color-Info">
+                    <div class="Color-Div">
+                        <img class="Color-IMG" src="https://www.filalab.lt/21-large_default/pla-1kg.jpg" alt="Balts" width="100" height="100">
+                        <span>Balts</span>
+                    </div>
+                    <div class="Color-Div">
+                        <img class="Color-IMG" src="https://www.filalab.lt/3-large_default/pla-1kg.jpg" alt="Metāliski zils" width="100" height="100">
+                        <span>Metāliski zils</span>
+                    </div>
+                    <div class="Color-Div">
+                        <img class="Color-IMG" src="https://www.filalab.lt/7-large_default/pla-1kg.jpg" alt="Varš" width="100" height="100">
+                        <span>Varš</span>
+                    </div>
+                    <div class="Color-Div">
+                        <img class="Color-IMG" src="https://www.filalab.lt/1-large_default/pla-1kg.jpg" alt="Melns" width="100" height="100">
+                        <span>Melns</span>
+                    </div>
+                </div>
+                <h4>Ja grib citas krāsas, kuras nav šobrīd, būs jāpiemaksā!</h4>
+            </div>
+            <div>
+                <input id="Costum-Back" class="Back" type="button" value="Atpakaļ" onclick="Back()" style="display: none;">
+            </div>
         </div>
     </main>
 </body>
