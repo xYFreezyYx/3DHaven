@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Haven</title>
+    <link rel="icon" href="../Photos/Logo.ico">
+    <link rel="stylesheet" href="ItemStyle.css">
+    <script type="text/javascript" src="ItemMain.js" defer></script>
+    <script type="text/javascript" src="ItemNav.js" defer></script>
+</head>
+<body>
+    <header>
+        <H1 onclick="MainPage()">
+            3D <span>Haven</span>
+        </H1>
+    </header>
+    <main>
+        <div class="ToolBar">
+            <input type="button" value="Sākums" onclick="MainPage()">
+            <input type="button" value="Sazināties" onclick="Contact()">
+        </div>
+        <div id="CostumDiv" class="ItemDiv" style="display: flex;">
+            <div id="Costum-Item-Info" class="Item-Info">
+                <div class="Item-IMGs">
+                    <img id="Costum-IMG-preview" class="Item-IMG-preview" src="../Photos/Robo-Arm.png" alt="Item Images" width="400" height="400">
+                    <div class="IMG-Buttons">
+                        <input type="button" onclick="IMGLeft()" value="<">
+                        <p id="Special-IMG-Counter" class="IMG-Counter">1/3</p>
+                        <input type="button" onclick="IMGRight()" value=">">
+                    </div>
+                </div>
+                <div class="Item-Description">
+                    <H3 id="Item-Special-Name" class="Item-Name">Specializēts pasūtījums</H3>
+                    <h4>No 10 €</h4>
+                    <input class="button" type="button" onclick="Buy()" value="Sagatavot pasūtījumu">
+                    <p>
+                        Objekts var būt platumā un garumā 19 cm, bet augstumā 20cm.
+                        <br> Ja grib lielāku objektu, tad būs jāprintē pa vairākām daļām.
+                    </p>
+                </div>
+            </div>
+            <form id="Costum-Buy-Form" class="Buy-Form" action="https://formspree.io/f/mrgjnqbk" method="post" style="display: none;">
+                <p>Par pasūtījuma informāciju sazināšos ar jums.<br>Cena tiks noteikta, kad būs zināmi objekta parametri.</p>
+                <div class="Form-Input-Div" style="margin-top: 15px;">
+                    <div class="Labels">
+                        <label>Īss objekta aprakts:</label>
+                    </div>
+                    <div class="Inputs">
+                        <textarea name="Aprakts:" cols="30" rows="5" placeholder="Īsi aprakstiet savu objektu" required=""></textarea>
+                    </div>
+                </div>
+                <div class="Form-Input-Div">
+                    <textarea name="Pirkuma-Informācija:" cols="30" rows="10" style="display: none;">Specializēts pasūtījums</textarea>
+                    <textarea name="Cena:" cols="30" rows="10" style="display: none;">No 10 €</textarea>
+                    <div class="Labels">
+                        <label for="Color">Krāsa:</label>
+                        <label for="Name">Jūsu vārds:</label>
+                        <label for="Email">Jūsu e-pasts:</label>
+                    </div>
+                    <div class="Inputs">
+                        <input name="Krāsa:" type="text" id="Color" placeholder="ieraksti vēlamo krāsu" required="">
+                        <input name="Their-Name:" type="text" id="Name" placeholder="Raimonds" required="">
+                        <input name="Email:" type="text" id="Email" placeholder="someting@example.com" required="">
+                    </div>
+                </div>
+                <input class="Submit" type="submit" value="Pasūtīt">
+                <p><span>Svarīgi!</span> Par pasūtījuma saņemšanu un apmaksu sazināšos ar jums. <span>Svarīgi!</span></p>
+              </form>
+            <div id="Colors-Special" class="Colors">
+                <h3>Pieejamās Krāsas</h3>
+                <div id="Color-Info-Special" class="Color-Info">
+                    <div class="Color-Div">
+                        <img class="Color-IMG" src="https://www.filalab.lt/21-large_default/pla-1kg.jpg" alt="Balts" width="100" height="100">
+                        <span>Balts</span>
+                    </div>
+                    <div class="Color-Div">
+                        <img class="Color-IMG" src="https://www.filalab.lt/3-large_default/pla-1kg.jpg" alt="Metāliski zils" width="100" height="100">
+                        <span>Metāliski zils</span>
+                    </div>
+                    <div class="Color-Div">
+                        <img class="Color-IMG" src="https://www.filalab.lt/7-large_default/pla-1kg.jpg" alt="Varš" width="100" height="100">
+                        <span>Varš</span>
+                    </div>
+                    <div class="Color-Div">
+                        <img class="Color-IMG" src="https://www.filalab.lt/1-large_default/pla-1kg.jpg" alt="Melns" width="100" height="100">
+                        <span>Melns</span>
+                    </div>
+                </div>
+                <h4>Ja grib citas krāsas, kuras nav šobrīd, būs jāpiemaksā!</h4>
+            </div>
+            <div>
+                <input id="Costum-Back" class="Back-Button" type="button" value="Atpakaļ" onclick="Back()" style="display: none;">
+            </div>
+        </div>
+    </main>
+</body>
+</html>
