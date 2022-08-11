@@ -39,6 +39,15 @@ function IMGLeft(){
         }
         IMG.src = CostumIMGs[currentIMG];
         IMGCounter.innerHTML = (currentIMG +1) + "/3";
+
+        let ComentSpecial = document.querySelector(".ComentSpecial");
+        if(IMGCounter.innerHTML === "1/3"){
+            ComentSpecial.innerHTML = "Pirkstu protēze";
+        }else if(IMGCounter.innerHTML === "2/3"){
+            ComentSpecial.innerHTML = "Suņa figūriņa";
+        }else if(IMGCounter.innerHTML === "3/3"){
+            ComentSpecial.innerHTML = "Laiviņas figūriņa";
+        }
     }
 }
 
@@ -67,6 +76,15 @@ function IMGRight(){
         }
         IMG.src = CostumIMGs[currentIMG];
         IMGCounter.innerHTML = (currentIMG +1) + "/3";
+
+        let ComentSpecial = document.querySelector(".ComentSpecial");
+        if(IMGCounter.innerHTML === "1/3"){
+            ComentSpecial.innerHTML = "Pirkstu protēze";
+        }else if(IMGCounter.innerHTML === "2/3"){
+            ComentSpecial.innerHTML = "Suņa figūriņa";
+        }else if(IMGCounter.innerHTML === "3/3"){
+            ComentSpecial.innerHTML = "Laiviņas figūriņa";
+        }
     }
 }
 

@@ -67,16 +67,23 @@ header > h1:hover{
 
 .IMG-Buttons{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.IMG-Buttons > input{
+.IMG-Buttons > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.IMG-Buttons > div > input{
     margin-left: 2.5px;
     margin-right: 2.5px;
 }
 
-.IMG-Buttons > p{
+.IMG-Buttons > div > p{
     margin: 0;
     margin-left: 2px;
     margin-right: 2px;
